@@ -1,0 +1,17 @@
+body {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    background-color: antiquewhite;
+    background-image:url(../images/spiration-light.png);
+    background-repeat:repeat;
+
+    /* background-position: center top;
+    background-size: cover; */
+
+}
+
+.jumbotron {
+    margin-top: 30px;
+    background: rgba(255,255,255, 0.7)
+}
