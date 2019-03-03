@@ -1,17 +1,56 @@
 body {
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: left;
     background-color: antiquewhite;
-    background-image:url(../images/spiration-light.png);
+    background-image:url(../images/Old_Brown_Coal_Mine_Map_Yallourn_North.jpg);
     background-repeat:repeat;
+    box-sizing: border-box;
 
     /* background-position: center top;
     background-size: cover; */
-
 }
 
 .jumbotron {
     margin-top: 30px;
-    background: rgba(255,255,255, 0.7)
+    background: rgba(255,255,255, 0.92);
+    border: 1px solid lightgrey;
 }
+
+.instructoin {
+    font-family: 'Courier New', Courier, monospace;
+    color: grey;
+
+}
+
+.btn {
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid lightgrey;
+    color: grey;
+}
+
+.col-md-12 {
+    height: 75px;
+    border: 1px solid lightgrey;
+}
+
+.small_head {
+    color: goldenrod;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#win,
+#lose {
+    color: goldenrod;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#target_number,
+#current_number {
+    font-weight: bold;
+    color: goldenrod;
+    font-size: 30px;
+    font-family: 'Courier New', Courier, monospace;
+}
+

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -16,64 +16,72 @@
 
 <body>
     <div class="container">
-        <div class="jumbotron border border-secondary">
-            <h1 class="display-4 px-1 mb-5">Crystal Collector</h1>
-            <div class="instructoin px-1">
+        <div class="jumbotron">
+            <h1 class="display-4 px-1 mb-4">Crystal Collector</h1>
+
+            <div class="instructoin px-1 mb-4">
+                <hr class="my-4">
+
                 <p>You will be given a random number at the start of the game.</p>
-                <p>There are four crystal below. By clicking on a crystal you will add a specific amount of points to
-                    your
-                    total
-                    score.</p>
-                <p>You win the game by matching your total score to random number. You lose the game if your total score
-                    goes
-                    above the random number.</p>
+                <p>There are four crystal below.
+                    <br>By clicking on a crystal you will add a specific amount of points to
+                    your total score.</p>
+                <p>You win the game by matching your total score to target number.
+                    <br>You lose the game if your total score goes above the target number.</p>
                 <p>The value of each crystal is hidden from you until you click on it.</p>
                 <p>Each time when the game starts, the game will change the value of each crystal.</p>
+                <button type="button" class="btn" id="start_button">Start!</button>
+                <hr class="my-4">
+
             </div>
-            <hr class="my-4">
 
+            <div class="row m-0">
+                <div class="col-md-4 px-1 mb-1">
+                    <div class="col-md-12">
+                        <div class="small_head text-center">Wins & Loses</div>
+                        <div id="win" class="text-center">Win: 0 </div>
+                        <div id="lose" class="text-center">Lose: 0 </div>
+                    </div>
+                </div>
 
+                <div class="col-md-4 px-1 mb-1">
+                    <div class="col-md-12">
+                        <div class="small_head text-center">Target Number</div>
+                        <div id="target_number" class="text-center"></div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 px-1 mb-1">
+                    <div class="col-md-12">
+                        <div class="small_head text-center">Your Score</div>
+                        <div id="current_number" class="text-center"></div>
+                    </div>
+                </div>
+            </div>
 
 
             <div class="crystal_image row m-0">
-                <div class="col-md-3 px-1"> <img class="rounded" id="garnet"
+                <div class="col-md-3 px-1 mt-3"> <img class="rounded" id="garnet"
                         src="assets/images/Stone-Garnet-January-Birthstone-Jewel-Red-Rock-2777153.jpg" alt="Garnet"
                         width="100%">
                 </div>
-                <div class="col-md-3 px-1"> <img class="rounded" id="peridot"
+                <div class="col-md-3 px-1 mt-3"> <img class="rounded" id="peridot"
                         src="assets/images/August-Green-Peridot-Gem-Birthstone-Stone-Birth-2783136.png" alt="Peridot"
                         width="100%">
 
                 </div>
-                <div class="col-md-3 px-1"> <img class="rounded" id="citrine"
+                <div class="col-md-3 px-1 mt-3"> <img class="rounded" id="citrine"
                         src="assets/images/Gem-Citrine-Stone-Birth-Birthstone-November-2783130.png" alt="Citrine"
                         width="100%">
 
                 </div>
-                <div class="col-md-3 px-1"> <img class="rounded" id="topaz"
+                <div class="col-md-3 px-1 mt-3"> <img class="rounded" id="topaz"
                         src="assets/images/December-Blue-Topaz-Birth-Birthstone-Stone-Gem-2783129.png" alt="Topaz"
                         width="100%">
                 </div>
 
+                <button type="button" class="btn ml-1 mt-3" id="restart_button">Restart</button>
 
-
-
-            </div>
-            <div class="row m-0">
-                <div class="col-md-6 px-1">
-                    <div class="small_head">Your Score</div>
-                    <div class="win"></div>
-                    <div class="lose"></div>
-                </div>
-
-                <div class="col-md-3 px-1">
-                    <div class="small_head">Ramdom Number</div>
-                    <div id="random_number"></div>
-                </div>
-                <div class="col-md-3 px-1">
-                    <div class="small_head">Current Number</div>
-                    <div id="current_number"></div>
-                </div>
             </div>
         </div>
     </div>
@@ -82,7 +90,14 @@
 
 
 
+
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Script -->
     <script src="assets/javascript/game.js"></script>
+
 
 
 </body>
