@@ -3,6 +3,7 @@ var currentNumber = 0;
 var targetNumber;
 var win = 0;
 var lose = 0;
+var gameStart = false;
 
 
 ///// STEP1. Generate the random target number
@@ -36,6 +37,7 @@ $("#start_button").on("click", function () {
     // write target number & current number into html
     $("#target_number").html(targetNumber);
     $("#current_number").html(currentNumber);
+    gameStart = true;
 })
 
 // when user click the restart button
@@ -49,35 +51,38 @@ $("#restart_button").on("click", function () {
     $("#lose").html("Lose: " + lose);
 
     //new game
-    newGame()
+    newGame();
 })
 
 // when user click the crystal,
 function crystalClick(id, index) {
     $(id).on("click", function () {
 
-        // increase current number as much as the number of each crystal have
-        currentNumber = currentNumber + arrOfCrystalNumber[index];
-        console.log("current number: " + currentNumber);
+        //if game starts,
+        if (gameStart) {
 
-        // update current number in HTML
-        $("#current_number").html(currentNumber);
+            // increase current number as much as the number of each crystal have
+            currentNumber = currentNumber + arrOfCrystalNumber[index];
+            console.log("current number: " + currentNumber);
 
-        // if current number === target number, win ++, update in HTML, new game
-        if (currentNumber === targetNumber) {
-            win++;
-            $("#win").html("Win: " + win);
-            console.log("win: " + win)
-            newGame()
-        }
+            // update current number in HTML
+            $("#current_number").html(currentNumber);
 
-        // if current number > random number, lose ++, update in HTML, new game
-        if (currentNumber > targetNumber) {
-            lose++;
-            $("#lose").html("Lose: " + lose);
-            console.log("lose: " + lose)
-            newGame()
+            // if current number === target number, win ++, update in HTML, new game
+            if (currentNumber === targetNumber) {
+                win++;
+                $("#win").html("Win: " + win);
+                console.log("win: " + win)
+                newGame();
+            }
 
+            // if current number > random number, lose ++, update in HTML, new game
+            if (currentNumber > targetNumber) {
+                lose++;
+                $("#lose").html("Lose: " + lose);
+                console.log("lose: " + lose);
+                newGame();
+            }
         }
     })
 }
