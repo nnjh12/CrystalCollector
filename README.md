@@ -1,5 +1,5 @@
 # Crystal Collector
-Developed a game using HTML, JavaScript, CSS, and ReactJS.
+Developed a game using HTML, JavaScript, and CSS.
 
 ## Rules
 - You'll be given a random target number at the start of the game.
