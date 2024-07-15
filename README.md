@@ -9,5 +9,6 @@ Developed a game using HTML, JavaScript, and CSS.
 - Each time you start a new game, the crystal values will change.
 
 ## Play the game now!
-[Go to the game](https://nnjh12.github.io/unit-4-game/)
+[Go to the game](https://nnjh12.github.io/unit-4-game/)</br>
+</br>
 ![preview](./assets/preview.png)
